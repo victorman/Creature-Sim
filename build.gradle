@@ -1,0 +1,31 @@
+
+buildscript {
+	gradle.startParameter.showStacktrace = org.gradle.api.logging.configuration.ShowStacktrace.ALWAYS
+}
+
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'eclipse'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+
+javafx {
+    version = "12"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+dependencies {
+	//implementation 'mysql:mysql-connector-java:8.0.19'
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+mainClassName = "CreatureSimulator.AppLauncher"
