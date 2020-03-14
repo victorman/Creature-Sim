@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 
 public class SimpleCreature extends Creature {
 
-	public SimpleCreature(int x, int y) {
+	public SimpleCreature(double x, double y) {
 		super(x, y, WIDTH, WIDTH);
 	}
 

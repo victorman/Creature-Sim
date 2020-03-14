@@ -1,7 +1,5 @@
 package CreatureSimulator;
 
-import java.util.Random;
-
 import CreatureSimulator.creatures.Creature;
 import javafx.geometry.Point2D;
 

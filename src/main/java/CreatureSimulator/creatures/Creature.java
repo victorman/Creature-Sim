@@ -59,7 +59,6 @@ public abstract class Creature {
 	}
 	
 	public abstract void draw(GraphicsContext context);
-
 	
 	public double getX() {
 		return mX;
@@ -112,5 +111,13 @@ public abstract class Creature {
 		double deg = getRandom().nextDouble() * 360;
 		mDeltaX = Math.cos(deg) * getSpeed();
 		mDeltaY = Math.sin(deg) * getSpeed();
+	}
+
+	
+	public void setPlacementStrategy(PlacementStrategy strategy) {
+		placementStrategy = strategy;
+		Point2D origin = this.placementStrategy.setOrigin(mX, mY, mWidth, mHeight);
+		mX = (int)origin.getX();
+		mY = (int)origin.getY();
 	}
 }

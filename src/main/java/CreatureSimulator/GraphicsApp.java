@@ -48,8 +48,8 @@ public abstract class GraphicsApp extends Application {
         this.frames = frames;
         startDrawing();
     }
-    public void setBottom(Node node) {
-        root.setBottom(node);
+    public void setLeft(Node node) {
+        root.setLeft(node);
     }
     private void internalDraw() {
         graphicContext.setFill(backgroundColor);
